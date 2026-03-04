@@ -1,13 +1,25 @@
 pipeline{
-=======
-        agent any
-        stages {
-            stage('demo') {
-                steps{
-                    echo "whats app"
+        agent{
+                node {
+                        lanel 'demo'
                 }
-            }
         }
+        stages {
+                stage('Build') {
+                        steps {
+                                echo "building"
+                        }
 
->>>>>>> 18436e58cde8dff1e02af2d7f148a575ced1dab9
+
+                }
+                stage('testing') {
+                        steps {
+                                sh '''
+
+                                   echo "testing the sh format"
+
+                                '''
+                        }
+                }
+        }
 }
