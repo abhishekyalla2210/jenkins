@@ -22,4 +22,10 @@ pipeline{
                         }
                 }
         }
+
+        post{
+                always {
+                        echo "i run always no matter the result"
+                }
+        }
 }
