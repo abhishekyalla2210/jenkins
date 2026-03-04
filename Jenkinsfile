@@ -1,8 +1,8 @@
 pipeline{
         agent{
-                node {
-                        lanel 'demo'
-                }
+                
+                label 'demo'
+                
         }
         stages {
                 stage('Build') {
