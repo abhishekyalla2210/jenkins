@@ -14,11 +14,11 @@ pipeline{
                 }
                 stage('testing') {
                         steps {
-                                sh '''
+                              
 
-                                   echo "testing the sh format"
+                                echo "testing the sh format"
 
-                                '''
+                                
                         }
                 }
         }
