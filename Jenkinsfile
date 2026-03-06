@@ -11,6 +11,11 @@ pipeline{
         
 
         }
+		  parameters {
+			string(name: 'NAME', defaultValue: 'Abhishek', description: 'Enter your name')
+			choice(name: 'ENV', choices: ['dev', 'stage', 'prod'], description: 'Select environment')
+			booleanParam(name: 'DEPLOY', defaultValue: true, description: 'Deploy application?')
+    }
         stages {
                 stage('Build') {
                         steps {
