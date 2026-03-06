@@ -49,6 +49,7 @@ pipeline{
                 }
                 aborted {
                         echo 'checking the triggers'
+                        echo 'checkng again'
                 }
         }
 } 
