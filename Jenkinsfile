@@ -7,9 +7,8 @@ pipeline{
         environment {
                 course = "devsecops"
                 duration = "6 months"
-        parameters {
-                string []
-        }
+       
+        
 
         }
         stages {
