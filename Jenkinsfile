@@ -4,11 +4,24 @@ pipeline{
                 label 'demo'
                 
         }
+        environment {
+                course = "devsecops"
+                duration = "6 months"
+        parameters {
+                string []
+        }
+
+        }
         stages {
                 stage('Build') {
                         steps {
-                                echo "building"
-                        }
+                                script{
+                                        sh """
+                                        echo "whats your name"
+                                        echo "i am good at ${course}"
+
+                                        """
+                                }
 
 
                 }
@@ -27,5 +40,16 @@ pipeline{
                 always {
                         echo "i run always no matter the result"
                 }
+                success {
+                        echo ' its a success'
+                }
+
+                failure {
+                        echo ' its a failure'
+                }
+                aborted {
+                        echo 'checking the triggers'
+                }
         }
+} 
 }
