@@ -12,12 +12,17 @@ pipeline{
 
         }
 		  parameters {
-			string(name: 'NAME', defaultValue: 'Abhishek', description: 'Enter your name')
+			string(name: 'NAME', defaultValue: 'Abhishek', description: 'Enter your age')
 			choice(name: 'ENV', choices: ['dev', 'stage', 'prod'], description: 'Select environment')
-			booleanParam(name: 'DEPLOY', defaultValue: true, description: 'Deploy application?')
+			booleanParam(name: 'DEPLOY', defaultValue: false, description: 'Deploy application?')
     }
         stages {
                 stage('Build') {
+							when {
+								expression { "$params.DEPLOY" == "true" }
+									
+						
+							}
                         steps {
                                 script{
                                         sh """
