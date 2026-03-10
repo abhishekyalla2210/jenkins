@@ -56,7 +56,7 @@ pipeline{
                         echo "i run always no matter the result"
                 }
                 success {
-                        echo ' its a successful'
+                        echo ' its a success'
                 }
 
                 failure {
