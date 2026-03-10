@@ -36,7 +36,7 @@ pipeline{
                                 }
                         }
                 }
-                stage('json reading') {
+                stage('json readings') {
                         steps {
                                 script {
                                         def packageJSON = readJSON file: 'package.json'
