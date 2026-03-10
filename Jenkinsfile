@@ -28,7 +28,7 @@ pipeline{
                                         withAWS(credentials: 'aws-cred', region: 'us-east-1') {
                                         sh '''
                                         aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 807291695422.dkr.ecr.us-east-1.amazonaws.com
-                                        docker build -t roboshop/catalogue .
+                                        docker build -t roboshop/catalogue:latest .
                                         docker tag roboshop/catalogue:latest 807291695422.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest
                                         docker push 807291695422.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest
                                         '''
@@ -53,7 +53,7 @@ pipeline{
 
         post{
                 always {
-                        echo "i run always no matter the result"
+                        echo "i run  no matter the result"
                 }
                 success {
                         echo ' its a success'
