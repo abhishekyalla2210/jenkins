@@ -62,9 +62,6 @@ pipeline{
                 failure {
                         echo ' its a failure'
                 }
-                aborted {
-                        echo 'checking the triggers'
-                        echo 'checkng again'
-                }
+                
         }
 } 
