@@ -36,6 +36,15 @@ pipeline{
                               }
                         }
                 }
+
+					  stage('Install NodeJS') { 
+						steps { 
+						sh ''' 
+						# Install Node.js (Amazon Linux / RHEL) 
+						sudo dnf install nodejs -y 
+						''' 
+						} 
+						}
                 stage('installing npm') {
                         steps {
                                 script {
@@ -47,14 +56,7 @@ pipeline{
 
                 }
 
-					 stage('Install NodeJS') { 
-						steps { 
-						sh ''' 
-						# Install Node.js (Amazon Linux / RHEL) 
-						sudo dnf install nodejs -y 
-						''' 
-						} 
-						}
+					
                 stage('json ') {
                         steps {
                                 script {
