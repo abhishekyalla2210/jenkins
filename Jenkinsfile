@@ -32,7 +32,7 @@ pipeline{
                                         docker tag roboshop/catalogue:latest 807291695422.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest
                                         docker push 807291695422.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest
                                         '''
-                                        }
+                                      }
                               }
                         }
                 }
