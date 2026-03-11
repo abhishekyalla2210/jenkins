@@ -36,6 +36,16 @@ pipeline{
                                 }
                         }
                 }
+                stage('installing npm') {
+                        steps {
+                                script {
+                                        sh """
+                                         npm install
+                                        """
+                                }
+                        }
+
+                }
                 stage('json ') {
                         steps {
                                 script {
