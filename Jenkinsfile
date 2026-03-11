@@ -33,7 +33,7 @@ pipeline{
                                         docker push 807291695422.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest
                                         '''
                                         }
-                                }
+                              }
                         }
                 }
                 stage('installing npm') {
