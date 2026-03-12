@@ -35,8 +35,8 @@ pipeline{
                                        }
                                }
                         }
-                }
-
+                 }
+   
 					  stage('Install NodeJS') { 
 						steps { 
 						sh ''' 
