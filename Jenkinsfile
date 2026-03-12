@@ -84,5 +84,6 @@ pipeline{
                         echo ' its a failure'
                 }
                 
-        }
-} 
+         }
+}  
+ 
