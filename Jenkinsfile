@@ -86,8 +86,8 @@ pipeline{
         }
 
         post{
-                always {
-                        echo "i run  no matter the result"
+                always { 
+                          echo "i run  no matter the result"
                 }
                 success {
                         echo ' its a success'
