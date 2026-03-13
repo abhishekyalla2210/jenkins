@@ -12,11 +12,11 @@ pipeline{
         
 
         }
-		  parameters {
+	parameters {
 			string(name: 'NAME', defaultValue: 'Abhishek', description: 'Enter your age')
-			choice(name: 'ENV', choices: ['dev', 'stage', 'prod'], description: 'Select environment')
+	                choice(name: 'ENV', choices: ['dev', 'stage', 'prod'], description: 'Select environment')
 			booleanParam(name: 'DEPLOY', defaultValue: true, description: 'Deploy application?')
-    }
+        }
         stages {
                 stage('Build') {
 	        when {
@@ -37,14 +37,14 @@ pipeline{
                         }
                  }
    
-					  stage('Install NodeJS') { 
-						steps { 
-						sh ''' 
-						# Install Node.js (Amazon Linux / RHEL) 
-						sudo dnf install nodejs -y 
-						''' 
-						} 
-						}
+		stage('Install NodeJS') { 
+			steps { 
+				sh ''' 
+				# Install Node.js (Amazon Linux / RHEL) 
+				sudo dnf install nodejs -y 
+				''' 
+				} 
+				}
                 stage('installing npm') {
                         steps {
                                 script {
@@ -70,6 +70,19 @@ pipeline{
                                 
                         }
                }
+
+
+               stage('SonarScanning') {
+                steps {
+                        script {
+                        def scannerHome = tool 'sonar2.0'
+                        withSonarQubeEnv('sonar-server') {
+                                sh "${scannerHome}/bin/sonar-scanner"
+                        }
+                        }
+                }
+}
+}
         }
 
         post{
