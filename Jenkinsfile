@@ -94,7 +94,7 @@ pipeline{
                 }
 
                 failure {
-                        echo '  its a failure'
+                        echo '   its a failure'
                 }
                 
          }
