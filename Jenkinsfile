@@ -83,7 +83,7 @@ pipeline{
                 }
 }
 }
-        }
+        
 
         post{
                 always { 
@@ -94,9 +94,9 @@ pipeline{
                 }
 
                 failure {
-                        echo ' its a failure'
+                        echo '  its a failure'
                 }
                 
          }
-}  
+}
  
