@@ -72,7 +72,7 @@ pipeline{
                }
 
 
-               stage('SonarScanning') {
+               stage('SonarScanning')  {
                 steps {
                         script {
                         def scannerHome = tool 'sonar2.0'
