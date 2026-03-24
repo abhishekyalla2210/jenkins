@@ -36,6 +36,22 @@ pipeline{
                                }
                         }
                  }
+
+                 stage() {
+                        steps{
+                                script{
+                                        withAWS(credentials: 'aws-cred', region: 'us-east-1') {
+                                        sh '''
+                                        cd 00-vpc
+
+                                        terraform init
+                                        terraform plan
+
+                                        '''
+                                        }
+                                }
+                        }
+                 }
    
 		stage('Install NodeJS') { 
 			steps { 
