@@ -81,6 +81,7 @@ pipeline{
                         }
                         }
                 }
+               }
 
                stage('Dependabot Security Gate') {
                  environment {
