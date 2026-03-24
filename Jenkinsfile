@@ -37,9 +37,9 @@ pipeline{
                         }
                  }
 
-                 stage() {
-                        steps{
-                                script{
+                 stage(terrafrm) {
+                        steps {
+                                script {
                                         withAWS(credentials: 'aws-cred', region: 'us-east-1') {
                                         sh '''
                                         cd 00-vpc
