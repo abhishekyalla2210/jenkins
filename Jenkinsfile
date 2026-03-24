@@ -36,7 +36,7 @@ pipeline{
                                }
                         }
                  }
-                 stage (installing terraform ) {
+                 stage ('installing terraform') {
                         steps {
                                 script{
                                         sh '''
@@ -49,7 +49,7 @@ pipeline{
                                 }
                         }
                  }
-                 stage(terrafrm) {
+                 stage('terrafrm') {
                         steps {
                                 script {
                                         withAWS(credentials: 'aws-cred', region: 'us-east-1') {
