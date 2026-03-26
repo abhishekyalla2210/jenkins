@@ -66,9 +66,20 @@ pipeline{
                  }
 
                  stage ('applying') {
+                        steps {
+                                
+                        
                         input {
-                                message "do u want to apply?"
+                                 message "do u want to apply?"
                                 ok "yes bro"
+                        }
+                                script {
+                                        sh """
+
+                                        cd 00-vpc
+                                        terraform apply -auto-approve
+                                        """
+                                }
                         }
                  }
    
