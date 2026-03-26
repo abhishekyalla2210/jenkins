@@ -7,7 +7,7 @@ terraform {
   }
 
    backend "s3" {
-    bucket = "jenkins-practices "
+    bucket = "jenkins-practices"
     key    = "terraform"
     region = "us-east-1"
     use_lockfile = false
