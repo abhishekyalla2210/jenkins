@@ -64,6 +64,13 @@ pipeline{
                                 }
                         }
                  }
+
+                 stage ('applying') {
+                        input {
+                                message "do u want to apply?"
+                                ok "yes bro"
+                        }
+                 }
    
 		stage('Install NodeJS') { 
 			steps { 
