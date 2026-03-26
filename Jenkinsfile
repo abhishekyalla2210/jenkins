@@ -56,7 +56,7 @@ pipeline{
                                         sh '''
                                         cd 00-vpc
 
-                                        terraform init
+                                        terraform init -reconfigure
                                         terraform plan
 
                                         '''

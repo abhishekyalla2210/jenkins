@@ -7,8 +7,8 @@ terraform {
   }
 
    backend "s3" {
-    bucket = "remote-state-devsecops"
-    key    = "vpc-eks"
+    bucket = "jenkins-practices "
+    key    = "terraform"
     region = "us-east-1"
     use_lockfile = false
     encrypt = true
