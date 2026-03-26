@@ -100,7 +100,7 @@ pipeline{
                }
 
 
-        //        stage('SonarScanning')  {
+        //        stage('Sonar Scanning')  {
         //         steps {
         //                 script {
         //                 def scannerHome = tool 'sonar2.0'
