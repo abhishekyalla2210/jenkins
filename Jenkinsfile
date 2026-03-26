@@ -76,8 +76,8 @@ pipeline{
                 stage('installing npm') {
                         steps {
                                 script {
-                                        sh """
-                                          npm install
+                                         sh """
+                                          npm install  
                                         """
                                 }
                         }
@@ -89,7 +89,7 @@ pipeline{
                         steps {
                                 script {
                                         def packageJSON = readJSON file: 'package.json'
-                                         echo "${packageJSON.version}"
+                                          echo "${packageJSON.version}"
                          }
                               
 
